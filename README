@@ -1,0 +1,238 @@
+# Pinterest‑Style Gallery (HTML & CSS)
+
+A responsive **Pinterest‑inspired gallery** built using **pure HTML & CSS**. This project focuses on modern layout techniques, hover interactions, media handling (images + videos), and responsive design without JavaScript.
+
+---
+
+## 📌 Project Objective
+
+To understand and practice:
+
+* Masonry / Pinterest‑style layouts
+* CSS positioning & hover overlays
+* Responsive design using media queries
+* Handling mixed media (images + videos)
+* Clean UI & smooth animations
+
+---
+
+## 🧱 Project Structure
+
+```
+project-folder/
+│── index.html
+│── style.css
+│── images/
+│   ├─ sunflower.jpg
+│   ├─ squirrel.jpg
+│   └─ ...
+└── README.md
+```
+
+---
+
+## 🖥️ Technologies Used
+
+* **HTML5** – structure & semantic layout
+* **CSS3** – layout, animations, responsiveness
+* **Remix Icons** – heart icon UI
+
+---
+
+## 🎨 Key Concepts Explained
+
+### 1️⃣ CSS Reset & Box Model
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+✔ Removes default browser spacing
+✔ `box-sizing: border-box` keeps width & padding predictable
+
+---
+
+### 2️⃣ Full‑Screen Layout
+
+```css
+html, body {
+  width: 100%;
+  height: 100%;
+}
+```
+
+Ensures the layout scales properly across devices.
+
+---
+
+### 3️⃣ Main Container (Flexbox)
+
+```css
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+```
+
+✔ Centers content
+✔ Keeps layout vertically stacked
+✔ `100vh` makes it full‑screen
+
+---
+
+### 4️⃣ Gradient Text Effect (GIF Text)
+
+```css
+.main h1 {
+  color: transparent;
+  background-clip: text;
+  background-image: url(gif-url);
+}
+```
+
+✔ Uses background clipping to fill text with animation
+✔ Common in modern Apple‑style UI
+
+---
+
+### 5️⃣ Pinterest‑Style Masonry Layout
+
+```css
+.gallery {
+  column-count: 4;
+  column-gap: 15px;
+}
+```
+
+✔ Creates vertical masonry columns
+✔ Automatically adjusts card heights
+✔ No JavaScript required
+
+---
+
+### 6️⃣ Card Design
+
+```css
+.card {
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+}
+```
+
+✔ Inline‑block works with CSS columns
+✔ Rounded corners & clean UI
+
+---
+
+### 7️⃣ Image & Video Handling
+
+```css
+.card img,
+.card video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+```
+
+✔ Maintains aspect ratio
+✔ Supports mixed media seamlessly
+
+---
+
+### 8️⃣ Hover Overlay Effect (Positioning)
+
+```css
+.bottom {
+  position: absolute;
+  bottom: -40%;
+}
+
+.card:hover .bottom {
+  transform: translateY(-100%);
+}
+```
+
+✔ Uses **absolute positioning**
+✔ Slides overlay upward on hover
+✔ Smooth transition with `ease-in-out`
+
+---
+
+### 9️⃣ Icons & Interaction
+
+```css
+.bottom i:hover {
+  transform: scale(1.2);
+  color: red;
+}
+```
+
+✔ Adds micro‑interaction
+✔ Improves user engagement
+
+---
+
+### 🔟 Responsive Design (Media Queries)
+
+```css
+@media (max-width: 700px) {
+  .gallery { column-count: 2; }
+}
+```
+
+✔ Adjusts columns for tablets & mobiles
+✔ Improves accessibility & UX
+
+---
+
+## 📱 Responsive Breakpoints
+
+| Screen Width | Columns |
+| ------------ | ------- |
+| Desktop      | 4       |
+| Tablet       | 3       |
+| Mobile       | 2       |
+| Small Phone  | 1       |
+
+---
+
+## 🚀 What You Learned From This Project
+
+* How Pinterest layouts work
+* Real‑world usage of `column-count`
+* CSS positioning (`relative` & `absolute`)
+* Hover effects & transitions
+* Responsive UI without frameworks
+
+---
+
+## 🔮 Future Improvements
+
+* JavaScript like button toggle
+* Modal image preview
+* Lazy loading
+* CSS Grid version
+
+---
+
+## 💡 Best Use Case
+
+✔ Frontend practice project
+✔ Portfolio UI showcase
+✔ CSS layout mastery
+
+---
+
+### ✨ Author
+
+Created for **learning & practice** in modern frontend development.
+
+Happy Coding 🚀
